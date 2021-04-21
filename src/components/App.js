@@ -13,12 +13,22 @@ class App extends React.Component {
 		this.state = { videos: [], selectedVideo: null };
 	}
 	
+	componentDidMount() {
+		// Default search term when page is first loaded
+		this.onTermSubmit("cats");
+	}
+
 	onTermSubmit = async (searchTerm) => {
 		const res = await YouTube.get('/search', {
 			params: {q: searchTerm}
 		})
 
-		this.setState({ videos: res.data.items });
+		// Brings up a list of 5 videos on the right hand side and
+		// automatically plays the first video in the left side
+		this.setState({ 
+			videos: res.data.items,
+			selectedVideo: res.data.items[0]
+		});
 	};
 	
 	onVideoSelect = (video) => {
