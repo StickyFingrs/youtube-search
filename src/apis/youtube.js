@@ -1,6 +1,7 @@
 import Axios from 'axios';
 
-const KEY = "AIzaSyC2oyWZG-nbcG9pGPeSkOrV1pidMaaOjug";
+// YouTube key goes here. Removed since the repo's public.
+const KEY = "";
 
 export default Axios.create({
 	baseURL: "https://www.googleapis.com/youtube/v3",
