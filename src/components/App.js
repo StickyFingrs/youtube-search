@@ -14,7 +14,7 @@ class App extends React.Component {
 	}
 	
 	componentDidMount() {
-		// Default search term when page is first loaded
+		// Default search term when page is first loadedasdasd
 		this.onTermSubmit("cats");
 	}
 
