@@ -7,7 +7,7 @@ const SearchBar = (props) => {
 		setSearchTerm(event.target.value);
 	};
 
-	const onTermSubmit = (event) => {
+	const onSubmit = (event) => {
 		event.preventDefault();
 
 		props.onTermSubmit(searchTerm);
@@ -15,7 +15,7 @@ const SearchBar = (props) => {
 
 	return (
 		<div className="ui segment">
-			<form className="ui form" onSubmit={onTermSubmit}>
+			<form className="ui form" onSubmit={onSubmit}>
 				<div className="field">
 					<label htmlFor="videoSearchBar">YouTube Search</label>
 					<input
