@@ -26,7 +26,7 @@ const App = () => {
 	}
 
 	useEffect(() => {
-		onTermSubmit("cats");
+		onTermSubmit("hololive");
 	}, [])
 	
 	return(
